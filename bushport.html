@@ -1,0 +1,330 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+  <meta charset="UTF-8">  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+  <title>My Portfolio</title>  
+<style>  
+    body {  
+      font-family: sans-serif;  
+      margin: 0;  
+      background-color: #18122B;  
+      color: #fff;  
+    }  
+
+    header {  
+      background-color: #18122B;  
+      padding: 20px;  
+    }  
+
+    .hero {  
+      display: flex;  
+      align-items: center;  
+      justify-content: space-between;  
+      padding: 50px;  
+    }  
+
+    .hero-text {  
+      flex: 1;  
+      padding-right: 20px;  
+    }  
+
+    .hero-text h1 {  
+      font-size: 3em;  
+      margin-bottom: 10px;  
+      color: white;  
+    }  
+
+    .highlight {  
+      color: #9D4EDD;  
+    }  
+
+    .hero-text p {  
+      font-size: 1.2em;  
+      line-height: 1.6;  
+    }  
+
+    .hero-image {  
+      flex: 1;  
+      text-align: center;  
+    }  
+
+    .hero-image img {  
+      width: 300px;  
+      border-radius: 10px;  
+    }  
+
+    .contact-button {  
+      background-color: #9D4EDD;  
+      color: #F8F5FF;  
+      border: none;  
+      padding: 15px 30px;  
+      font-size: 1.1em;  
+      border-radius: 5px;  
+      cursor: pointer;  
+      margin-top: 20px;  
+    }  
+
+    /* New "About Me" Section Styles */  
+    .about-me {  
+      padding: 50px;  
+      background-color: #312A46;  
+      border-radius: 10px;  
+      margin: 20px 50px;  
+    }  
+
+    .about-me h2 {  
+      font-size: 2.5em;  
+      margin-bottom: 20px;  
+      text-align: center; /* Center the heading */  
+    }  
+
+    .about-me p {  
+      font-size: 1.2em;  
+      line-height: 1.6;  
+      color: #CBC5EA;  
+      text-align: justify; /* Justify the paragraph text */  
+    }  
+
+    /* "Skills," "Education," "Internships," "Certifications" Section Styles */  
+    .section {  
+      padding: 50px;  
+      text-align: center;  
+    }  
+
+    .section h2 {  
+      font-size: 2.5em;  
+      margin-bottom: 30px;  
+    }  
+
+    .grid-container {  
+      display: grid;  
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /*Adjust minmax value as needed*/  
+      gap: 20px;  
+      justify-items: center;  
+    }  
+
+    .grid-item {  
+      background-color: #312A46;  
+      border-radius: 10px;  
+      padding: 20px;  
+      text-align: center;  
+    }  
+     .grid-item p{  
+        color: #CBC5EA;  
+     }  
+
+    .skills-grid {  
+      display: grid;  
+      grid-template-columns: 1fr; /*  One column only */  
+      gap: 20px;  
+      justify-items: center;  
+    }  
+
+    .skill {  
+      text-align: center;  
+    }  
+
+    .skill img {  
+      width: 700px;  /* Increased the width */  
+      max-width: 100%; /*  Makes the image responsive */  
+      border-radius: 0px; /* Remove border radius */  
+      background-color: transparent; /* Removes background color */  
+      padding: 0px;  /* Removes padding */  
+    }  
+
+    .skill p {  
+      margin-top: 10px;  
+    }  
+
+    .experience {  
+      padding: 50px;  
+    }  
+
+    .experience-item {  
+      display: flex;  
+      align-items: center;  
+      margin-bottom: 30px;  
+      background-color: #312A46;  
+      padding: 20px;  
+      border-radius: 10px;  
+    }  
+
+    .experience-text {  
+      flex: 2;  
+      padding-right: 20px;  
+    }  
+
+    .experience-text h3 {  
+      font-size: 1.5em;  
+      margin-bottom: 5px;  
+    }  
+
+    .experience-text p {  
+      color: #CBC5EA;  
+    }  
+
+    .experience-image {  
+      flex: 1;  
+      text-align: center;  
+    }  
+
+    .experience-image img {  
+      width: 150px;  
+      border-radius: 5px;  
+    }  
+
+    footer {  
+      text-align: center;  
+      padding: 20px;  
+      background-color: #312A46;  
+    }  
+
+    /* Contact and Links */  
+    .contact-links {  
+      text-align: center;  
+      margin-top: 20px;  
+    }  
+
+    .contact-links a {  
+      color: #9D4EDD;  
+      margin: 0 10px;  
+      text-decoration: none; /* Remove underlines from links */  
+    }  
+    .contact-links a:hover {  
+      text-decoration: underline; /* Add underline on hover */  
+    }  
+
+    /* Media Queries for Responsiveness */  
+    @media (max-width: 768px) {  
+      .hero {  
+        flex-direction: column;  
+        text-align: center;  
+      }  
+
+      .hero-text {  
+        padding-right: 0;  
+      }  
+
+      .hero-image img {  
+        width: 200px;  
+      }  
+
+      .experience-item {  
+        flex-direction: column;  
+        text-align: center;  
+      }  
+
+      .experience-text {  
+        padding-right: 0;  
+      }  
+        .grid-container {  
+          grid-template-columns: 1fr;  
+        }  
+    }  
+  </style> </head>  
+<body>  
+
+  <header>  
+    <div class="hero">  
+      <div class="hero-text">  
+        <h1>Hi, I'm <span class="highlight">Bushra</span></h1>  
+        <p>A Computer Science Engineering Student at MLRIT Institute of Technology. Enhancing skills in Frontend Development.</p>  
+        <button class="contact-button">Contact Me</button>  
+      </div>  
+      <div class="hero-image">  
+        <img src="bushu.jpg" alt="BUSHRA">  
+      </div>  
+    </div>  
+  </header>  
+
+  <section class="about-me">  
+    <h2>About Me</h2>  
+    <p>  
+      A passionate Computer Science Engineering student at MLRIT Institute of Technology with a CGPA of 8.91. I am enhancing my software development skills, particularly in Frontend Development. I aim to do my best in my studies and focus on learning new things every day. My technical skills include programming languages such as Java, Python, C, HTML/CSS, and SQL. I am proficient in tools like VS Code and Eclipse and am gaining experience with frameworks like Jenkins and WordPress. Additionally, I have completed certifications in Java Full Stack with React JS & AI, enhancing my knowledge in these areas.  
+    </p>  
+  </section>  
+
+ <section class="skills section">  
+    <h2>SKILLS</h2>  
+    <div class="skills-grid">  
+      <div class="skill">  
+        <img src="https://miro.medium.com/v2/resize:fit:678/0*kxPYwfJmkXZ3iCWy.png" alt="MERN Stack">  
+      </div>  
+    </div>  
+  </section>  
+  </section>  
+
+  <section class="section" id="education">  
+        <h2>Education</h2>  
+        <div class="grid-container">  
+            <div class="grid-item">  
+                <h3>MLR Institute of Technology</h3>  
+                <p>Bachelor of Technology in Computer Science and Engineering</p>  
+                <p>GPA: 8.91</p>  
+                <p>2022 - 2026</p>  
+            </div>  
+            <div class="grid-item">  
+                <h3>Sri Chaitanya Junior College</h3>  
+                <p>Intermediate Education</p>  
+                <p>Percentage: 97%</p>  
+                <p>2020 - 2022</p>  
+            </div>  
+            <div class="grid-item">  
+                <h3>St. North city  High School</h3>  
+                <p>Secondary School Education</p>  
+                <p>GPA: 10</p>  
+                <p>2020</p>  
+            </div>  
+        </div>  
+    </section>  
+
+  <section class="section" id="internships">  
+        <h2>Internships</h2>  
+        <div class="grid-container">  
+            <div class="grid-item">  
+                <h3>Full Stack MERN Developer Intern</h3>  
+                <p>Innomatics Research Labs</p>  
+                <p>Jan 2025 - Present</p>  
+                </div>  
+            <div class="grid-item">  
+                <h3>Frontend Developer Intern</h3>  
+                <p>Labmetrix Services</p>  
+                
+
+            </div>  
+        </div>  
+    </section>  
+
+  <section class="section" id="certifications">  
+        <h2>Certifications</h2>  
+        <div class="grid-container">  
+            <div class="grid-item">  
+                <h3>Java Full Stack with React JS & AI</h3>  
+                <p>Java Full Stack with React JS & AI</p>  
+                </div>  
+            <div class="grid-item">  
+                <h3>AWS Cloud Practitioner</h3>  
+                <p>Amazon Web Services</p>  
+                </div>  
+        </div>  
+    </section>  
+
+  <footer>  
+    <div class="contact-links">  
+        <a href="https://github.com/BUSH23-1/innomatics_bush" target="_blank">GitHub</a> |  
+        <a href="https://www.linkedin.com/in/shaikbushra/" target="_blank">LinkedIn</a> |  
+        <a href="UPD.Res.pdf" target="_blank">Resume</a>  
+    </div>  
+    <p>&copy; 2024 bushra. All rights reserved.</p>  
+  </footer>  
+
+  <script>  
+    const contactButton = document.querySelector('.contact-button');  
+
+    contactButton.addEventListener('click', () => {  
+      window.location.href = 'https://mail.google.com/mail/u/0/#inbox';
+    });  
+  </script>  
+</body>  
+</html>
